@@ -6,7 +6,9 @@ class quickCreateButton extends React.Component {
       <a href={this.props.link}>
         <div className="quickCreateButtonContainer">
           <div className="quickCreateButton">
-            <div className="quickCreateButtonText">{this.props.text}</div>
+            <div className="quickCreateButtonText">
+              <h1>{this.props.text}</h1>
+            </div>
             <div className="quickCreateButtonIcon">
               <img
                 src={this.props.icon}

@@ -14,6 +14,16 @@ a {
     text-decoration: none;
 }
 
+.quickCreateToolbarContainer {
+    width: 230px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+
 .quickCreateButtonContainer {
     width: 230px;
     height: 64px;
@@ -30,22 +40,6 @@ a {
     margin-bottom: 20px;
 }
 
-.quickCreateActionButton {
-    height: 64px;
-    width: 64px;
-    background-color: #000;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    background-image: url('./img/plusIcon.png');
-    background-size: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    float: right;
-}
-
-.quickCreateInnerContainer {}
-
 .quickCreateButton {
     width: 64px;
     height: 64px;
@@ -59,6 +53,7 @@ a {
     transition: 230ms;
     display: flex;
     justify-content: flex-end;
+
 }
 
 .quickCreateButtonIcon {
@@ -71,13 +66,12 @@ a {
 .quickCreateButtonText {
     opacity: 0;
     color: #fff;
-    font-size: 16px;
+    font-size: 9px !important;
+    line-height: 10px;
     transition-delay: 0ms;
     height: 100%;
     display: flex;
     align-items: center;
-    /* margin-left: 10px; */
-    /* margin-right: 10px; */
     width: calc(100% + 64px);
     display: flex;
     justify-content: center;
@@ -100,6 +94,73 @@ a {
     width: 44px;
 }
 
+.quickCreateActionTextContainer {
+    width: 64px;
+    height: 64px;
+    transition: 200ms;
+    float: right;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    border-width: 4px;
+    border-color: #000;
+    border-style: solid;
+}
+
+.quickCreateActionText {
+    width: 0px;
+    opacity: 0;
+    color: #fff;
+    transition-delay: 0ms;
+}
+
+.quickCreateActionTextContainerActive {
+    width: 222px;
+    border-radius: 100000px;
+    height: 64px;
+    transition: 200ms;
+    float: right;
+    background-color: #000;
+    cursor: pointer;
+    display: flex;
+    border-width: 4px;
+    border-color: #000;
+    border-style: solid;
+}
+
+.quickCreateActionTextContainerActive .quickCreateActionText {
+    width: calc(100% - 100px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    color: #fff;
+    font-size: 9px !important;
+    line-height: 10px;
+    transition-delay: 200ms;
+}
+
+.quickCreateActionButton {
+    height: 64px;
+    width: 64px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background-image: url('./img/plusIcon.png');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    float: left;
+}
+
+.quickCreateToolbarInner {
+    opacity: 1;
+    transition: 200ms;
+}
+
 .inactive {
-    display: none;
+    opacity: 0;
+    transition: 200ms;
 }

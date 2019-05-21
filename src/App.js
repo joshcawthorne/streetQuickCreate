@@ -23,10 +23,10 @@ class App extends React.Component {
       <div>
         <div className="App">
           <h1>Street Component</h1>
-          <div className="quickCreateToolbarContinaer">
+          <div className="quickCreateToolbarContainer">
             <div
               className={
-                this.state.active ? "inactive" : "quickCreateToolbarInner"
+                this.state.active ? "quickCreateToolbarInner" : "inactive"
               }
             >
               <QuickCreate text={"New Valuation"} icon={valuation} link={"#"} />
@@ -34,9 +34,18 @@ class App extends React.Component {
               <QuickCreate text={"New Viewing"} icon={viewing} link={"#"} />
             </div>
             <div
-              className="quickCreateActionButton"
+              className={
+                this.state.active
+                  ? "quickCreateActionTextContainerActive"
+                  : "quickCreateActionTextContainer"
+              }
               onClick={this.toggleClass}
-            />
+            >
+              <div className="quickCreateActionButton" />
+              <div className="quickCreateActionText">
+                <h1>Quick Create</h1>
+              </div>
+            </div>
           </div>
         </div>
       </div>
