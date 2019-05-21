@@ -1,3 +1,5 @@
+/* Font Import */
+
 @font-face {
     font-family: 'basier';
     src: url('./fonts/basiercircle.woff') format('woff'),
@@ -5,6 +7,8 @@
     font-weight: normal;
     font-style: normal;
 }
+
+/* Core Styles */
 
 body {
     margin: 0;
@@ -14,6 +18,8 @@ body {
 a {
     text-decoration: none;
 }
+
+/* Toolbar Styles */
 
 .quickCreateToolbarContainer {
     width: 230px;

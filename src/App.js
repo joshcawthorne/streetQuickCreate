@@ -5,6 +5,7 @@ import viewing from "./img/viewing.png";
 import applicant from "./img/applicant.png";
 import valuation from "./img/valuation.png";
 
+//To add or edit buttons, edit this array:
 const buttonData = [
   {
     text: "New Valuation",
