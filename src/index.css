@@ -1,7 +1,8 @@
 @font-face {
     font-family: 'basier';
-    src: url('./fonts/basier.woff') format('woff');
-    font-weight: normal;
+    src: url('./fonts/basiercircle.woff') format('woff'),
+        url('./fonts/basiercircle.woff2') format('woff2'),
+        font-weight: normal;
     font-style: normal;
 }
 
