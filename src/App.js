@@ -5,6 +5,24 @@ import viewing from "./img/viewing.png";
 import applicant from "./img/applicant.png";
 import valuation from "./img/valuation.png";
 
+const buttonData = [
+  {
+    text: "New Valuation",
+    icon: valuation,
+    link: "#"
+  },
+  {
+    text: "New Applicant",
+    icon: applicant,
+    link: "#"
+  },
+  {
+    text: "New Viewing",
+    icon: viewing,
+    link: "#"
+  }
+];
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -31,9 +49,9 @@ class App extends React.Component {
                 this.state.active ? "quickCreateToolbarInner" : "inactive"
               }
             >
-              <QuickCreate text={"New Valuation"} icon={valuation} link={"#"} />
-              <QuickCreate text={"New Applicant"} icon={applicant} link={"#"} />
-              <QuickCreate text={"New Viewing"} icon={viewing} link={"#"} />
+              {buttonData.map(data => (
+                <QuickCreate {...data} />
+              ))}
             </div>
             <div
               className={
