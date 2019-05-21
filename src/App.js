@@ -8,12 +8,14 @@ import valuation from "./img/valuation.png";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.toggleClass = this.toggleClass.bind(this);
+    this.toggleFAB = this.toggleFAB.bind(this);
     this.state = {
       active: false
     };
   }
-  toggleClass() {
+
+  //Function to toggle floating action button
+  toggleFAB() {
     const currentState = this.state.active;
     this.setState({ active: !currentState });
   }
@@ -39,7 +41,7 @@ class App extends React.Component {
                   ? "quickCreateActionTextContainerActive"
                   : "quickCreateActionTextContainer"
               }
-              onClick={this.toggleClass}
+              onClick={this.toggleFAB}
             >
               <div className="quickCreateActionButton" />
               <div className="quickCreateActionText">
